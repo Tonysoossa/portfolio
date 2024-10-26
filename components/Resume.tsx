@@ -1,5 +1,5 @@
 "use client";
-import { Education } from "../../components/resume/Education";
+import { Education } from "./resume/Education";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
