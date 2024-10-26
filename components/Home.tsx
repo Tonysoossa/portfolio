@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -17,26 +17,6 @@ export default function Home() {
         tant qu'intégrateur web. Ici, je vous présente certains projets que j'ai
         réalisés ainsi que des détails sur mes compétences et aspirations.
       </p>
-      <div className="flex justify-center space-x-4 text-fadeInUp">
-        <a
-          href="https://github.com/Tonysoossa"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-full transition-colors flex items-center"
-        >
-          <FontAwesomeIcon icon={faGithub} className="w-6 h-6 mr-2" />
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/tony-servanin-90502a293/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-full transition-colors flex items-center"
-        >
-          <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 mr-2" />
-          LinkedIn
-        </a>
-      </div>
     </div>
   );
 }

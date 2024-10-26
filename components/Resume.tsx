@@ -1,8 +1,9 @@
 "use client";
 import { Education } from "./resume/Education";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faFileArrowDown, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 export default function Resume() {
   const skills = [
@@ -215,24 +216,39 @@ export default function Resume() {
       </section>
       <section>
         <h2 className="flex justify-center text-2xl font-semibold mb-6 mt-8">
-          Curriculum vitæ
+          Curriculum vitæ et Profil Professionnel
         </h2>
-        <div className="flex gap-10 justify-center mb-4">
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
           <button
-            className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-colors items-center"
             onClick={handleCVBtn}
+            className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
           >
             <FontAwesomeIcon icon={faFileArrowDown} className="mr-2" />
-            Télécharger mon CV
+            Télécharger CV
           </button>
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-colors">
-              Voir mon CV
-              <FontAwesomeIcon
-                icon={faArrowUpRightFromSquare}
-                className="ml-2"
-              />
+          <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <button className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center">
+              Voir CV
+              <FontAwesomeIcon icon={faEye} className="ml-2" />
             </button>
+          </Link>
+          <a
+            href="https://www.linkedin.com/in/tony-servanin-90502a293/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-800 hover:bg-blue-900 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Tonysoossa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-700 hover:bg-gray-900 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
+          >
+            Github
+            <FontAwesomeIcon icon={faGithub} className="ml-2" />
           </a>
         </div>
       </section>
