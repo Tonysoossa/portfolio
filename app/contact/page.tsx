@@ -9,37 +9,50 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+  
     emailjs
       .send(
-        "service_pfoliofront1", // Remplace par ton Service ID
-        "template_pfoliofront1", // Remplace par ton Template ID
-        formData,
-        "YOUR_USER_ID" // Remplace par ton User ID
+        "service_pfoliofront1",
+        "template_pfoliofront1",
+        templateParams,
+        "attwSkjADtRjxXset"
       )
       .then((result) => {
         console.log("Email envoyé:", result.text);
         setFormData({ name: "", email: "", message: "" });
-        alert("Message envoyé avec succès");
+        setStatus('success');
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi:", error.text);
-        alert("Erreur lors de l'envoi du message");
+        setStatus('error');
       });
   };
 
+  const closeModal = () => {
+    setStatus('idle');
+  };
+
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto relative">
       <h1 className="text-4xl font-bold mb-8 text-center">
-        Démarrons un projet ensemble, n’hésitez pas à me contacter
+        Démarrons un projet ensemble, n'hésitez pas à me contacter
       </h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -91,6 +104,36 @@ export default function Contact() {
           Send Message
         </button>
       </form>
+
+      {status !== 'idle' && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-gray-800 p-8 rounded-lg shadow-xl max-w-md w-full">
+            {status === 'success' ? (
+              <div className="text-center">
+                <svg className="mx-auto h-12 w-12 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <h3 className="mt-2 text-xl font-medium text-gray-100">Message envoyé avec succès !</h3>
+                <p className="mt-1 text-sm text-gray-400">Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
+              </div>
+            ) : (
+              <div className="text-center">
+                <svg className="mx-auto h-12 w-12 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <h3 className="mt-2 text-xl font-medium text-gray-100">Erreur lors de l'envoi</h3>
+                <p className="mt-1 text-sm text-gray-400">Désolé, une erreur s'est produite. Veuillez réessayer plus tard.</p>
+              </div>
+            )}
+            <button
+              onClick={closeModal}
+              className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-colors"
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
