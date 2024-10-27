@@ -6,19 +6,16 @@ import Contact from '../components/Contact'
 export default function Page() {
   return (
     <div className="space-y-20">
-      <section id="home" className="min-h-screen flex items-center justify-center">
+      <section id="home" className="py-36">
         <Home />
       </section>
-      
-      <section id="projects" className="py-20">
+      <section id="projects" className="pb-10">
         <Projects />
       </section>
-      
-      <section id="resume" className="py-20">
+      <section id="resume" className="pb-10">
         <Resume />
       </section>
-      
-      <section id="contact" className="py-20">
+      <section id="contact" className="pb-10">
         <Contact />
       </section>
     </div>

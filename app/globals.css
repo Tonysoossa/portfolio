@@ -3,8 +3,16 @@
 @tailwind utilities;
 
 :root {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 245, 222, 179; 
+    --background-end-rgb: 210, 180, 140;   
+  }
+}
+
+.dark {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 13, 17, 23;
+  --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 }
 
@@ -54,9 +62,28 @@ body {
   width: fit-content;
 }
 
+@media (max-width: 640px) { /* XS breakpoint */
+  .text-animated {
+    white-space: normal; /* Permet le wrapping */
+  }
+}
+
 .text-fadeInUp {
   display: inline-block;
   animation: fadeInUp 3s ease forwards;
   animation-delay: 3s;
   opacity: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 40s linear infinite;
 }

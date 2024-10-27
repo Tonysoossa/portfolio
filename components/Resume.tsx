@@ -142,7 +142,7 @@ export default function Resume() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
           <Education
-            src="/logo/sncf.webp"
+            src="/logos/education/sncf.webp"
             alt="SNCF Logo"
             link="/"
             company="SNCF"
@@ -151,7 +151,7 @@ export default function Resume() {
             imageClassName="w-16 -pt-1 pb-1"
           />
           <Education
-            src="/logo/udemy.webp"
+            src="/logos/education/udemy.webp"
             alt="SNCF Logo"
             link="https://www.udemy.com/"
             company="Udemy"
@@ -160,7 +160,7 @@ export default function Resume() {
             imageClassName="w-[7rem] pt-1 pb-2"
           />
           <Education
-            src="/logo/codewars.webp"
+            src="/logos/education/codewars.webp"
             alt="SNCF Logo"
             link="https://www.codewars.com/"
             company="Codewars"
@@ -169,7 +169,7 @@ export default function Resume() {
             imageClassName="w-[8rem] pt-1 pb-2 rounded-[14px]"
           />
           <Education
-            src="/logo/openclassroom.webp"
+            src="/logos/education/openclassroom.webp"
             alt="SNCF Logo"
             link="https://openclassrooms.com/fr/"
             company="Openclassroom"
