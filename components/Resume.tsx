@@ -6,18 +6,6 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 
 export default function Resume() {
-  const skills = [
-    "React",
-    "TypeScript",
-    "Redux",
-    "Next.js",
-    "Node.js",
-    "CSS/SASS",
-    "Tailwind CSS",
-    "ChakraUI",
-    "Git",
-    "RESTful APIs",
-  ];
 
   const personalSkills = [
     "Communication",
@@ -76,23 +64,10 @@ export default function Resume() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <section className="mb-12 flex flex-col gap-4 justify-evenly">
       <h1 className="text-4xl font-bold mb-8 flex justify-center">
         À propos de moi
       </h1>
-      <section className="mb-12 flex flex-col gap-4 justify-evenly">
-        <h2 className="flex justify-center text-2xl font-semibold mb-4">
-          Skills
-        </h2>
-        <div className="flex flex-wrap justify-center gap-3">
-          {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
         <h2 className="flex justify-center text-2xl font-semibold mb-3 mt-5">
           Compétences
         </h2>
