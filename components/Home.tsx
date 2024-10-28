@@ -1,22 +1,18 @@
 "use client";
 
+import { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const { language } = useContext(LanguageContext);
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+  const handleScrollToProjects = () => {
+    const projectsSection = document.querySelector("#projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
     }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
   };
 
   return (
@@ -25,20 +21,24 @@ export default function Home() {
         Servanin Tony
       </h1>
       <h2 className="text-3xl md:text-5xl dark:text-blue-400 mb-12 sm:mb-6 text-center text-animated">
-        Javascript React Frontend Developer
+        {language === "fr"
+          ? "Développeur Frontend Javascript React"
+          : "Javascript React Frontend Developer"}
       </h2>
       <p className="text-center text-lg md:text-2xl max-w-4xl mb-8 text-fadeInUp dark:text-gray-300">
-        Originaire et résidant à Lyon, France, j'ai 25 ans et me forme au
-        développement web depuis novembre 2022, avec pour ambition de devenir
-        développeur front-end. Récemment, j'ai obtenu un diplôme de niveau 5 en
-        tant qu'intégrateur web. Ici, je vous présente certains projets que j'ai
-        réalisés ainsi que des détails sur mes compétences et aspirations.
+        {language === "fr"
+          ? "Originaire et résidant à Lyon, France, j'ai 25 ans et me forme au développement web depuis novembre 2022, avec pour ambition de devenir développeur front-end. Récemment, j'ai obtenu un diplôme de niveau 5 en tant qu'intégrateur web. Ici, je vous présente certains projets que j'ai réalisés ainsi que des détails sur mes compétences et aspirations."
+          : "Originally from and residing in Lyon, France, I'm 25 years old and have been training in web development since November 2022, with the ambition of becoming a front-end developer. I recently obtained a level 5 diploma as a web integrator. Here, I present some projects I've completed as well as details about my skills and aspirations."}
       </p>
       <button
-        onClick={toggleDarkMode}
-        className="mt-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors duration-200"
+        onClick={handleScrollToProjects}
+        className="flex text-justifyp-2 h-16 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
       >
-        <FontAwesomeIcon icon={darkMode ? faSun : faMoon} className="w-8 h-8"/>
+        <FontAwesomeIcon
+          icon={faArrowDownLong}
+          size="2xl"
+          className="pt-4 animate-bounce"
+        />
       </button>
     </div>
   );

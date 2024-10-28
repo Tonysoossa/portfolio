@@ -1,11 +1,16 @@
+'use client'
 import Image from "next/image";
 import TechSlider from "./projects/TechSlider";
 import TechList from "./projects/TechList";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const projects = [
   {
     title: "Kasa ?",
-    description: "description",
+    description: {
+      fr: "description en français",
+      en: "description in English"
+    },
     date: "2024",
     image: "/icons/placeholder.svg",
     link: "#",
@@ -13,7 +18,10 @@ const projects = [
   },
   {
     title: "Argent-bank ? ",
-    description: "description",
+    description: {
+      fr: "description en français",
+      en: "description in English"
+    },
     date: "2024",
     image: "/icons/placeholder.svg",
     link: "#",
@@ -21,7 +29,10 @@ const projects = [
   },
   {
     title: "old project api?",
-    description: "description",
+    description: {
+      fr: "description en français",
+      en: "description in English"
+    },
     date: "2023",
     image: "/icons/placeholder.svg",
     link: "#",
@@ -47,10 +58,14 @@ const technNames = [
 ];
 
 export default function Projects() {
+  const { language } = useLanguage();
   projects.sort((a, b) => parseInt(b.date) - parseInt(a.date));
+  
   return (
     <div className="space-y-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">Mes Projets</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">
+        {language === 'fr' ? 'Mes Projets' : 'My Projects'}
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div
@@ -66,13 +81,13 @@ export default function Projects() {
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-400 mb-3">{project.description}</p>
+              <p className="text-gray-400 mb-3">{project.description[language]}</p>
               <div className="flex gap-3 justify-center">
                 <a
                   href={project.link}
                   className="text-blue-400 hover:underline"
                 >
-                  View Project
+                  {language === 'fr' ? 'Voir le Projet' : 'View Project'}
                 </a>
                 <span>|</span>
                 <a
@@ -89,7 +104,9 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <h1 className="text-4xl font-bold mb-8 flex justify-center"> Mes outils de travail</h1>
+      <h1 className="text-4xl font-bold mb-8 flex justify-center">
+        {language === 'fr' ? 'Mes outils de travail' : 'My Work Tools'}
+      </h1>
       <TechSlider />
       <TechList technName={technNames} />
     </div>

@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 :root {
-  :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 245, 222, 179;
-    --background-end-rgb: 210, 180, 140;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 222, 179;
+  --background-end-rgb: 210, 180, 140;
 }
 
 .dark {
@@ -18,7 +16,6 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
 
 body {
@@ -93,4 +90,20 @@ body {
 
 .animate-slide {
   animation: slide 200s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+  animation-duration: 3s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
