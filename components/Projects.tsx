@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TechSlider from "./projects/TechSlider";
+import TechList from "./projects/TechList";
 
 const projects = [
   {
@@ -28,6 +29,23 @@ const projects = [
   },
 ];
 
+const technNames = [
+  { name: "JavaScript" },
+  { name: "React" },
+  { name: "TypeScript" },
+  { name: "Next.js" },
+  { name: "Node.js" },
+  { name: "RESTful APIs" },
+  { name: "Git" },
+  { name: "Redux" },
+  { name: "Postman" },
+  { name: "Tailwind CSS" },
+  { name: "Chakra UI" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "Sass" },
+];
+
 export default function Projects() {
   projects.sort((a, b) => parseInt(b.date) - parseInt(a.date));
   return (
@@ -37,7 +55,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105"
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 cursor-pointer"
           >
             <Image
               src={project.image}
@@ -71,10 +89,9 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <h2 className="flex justify-center text-2xl font-semibold mb-4">
-        Mes outils de travail
-      </h2>
+      <h1 className="text-4xl font-bold mb-8 flex justify-center"> Mes outils de travail</h1>
       <TechSlider />
+      <TechList technName={technNames} />
     </div>
   );
 }

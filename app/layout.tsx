@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-grow container mx-auto px-4 py-8 mt-16">
+        <main className="flex-grow container mx-auto px-4 py-8 ">
           {children}
         </main>
         <Footer />

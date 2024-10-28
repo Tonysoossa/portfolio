@@ -23,9 +23,9 @@ const technologies: Technology[] = [
   {
     name: "React",
     logo: "/logos/techslider/react.svg",
-    width: 75,
+    width: 80,
     height: 100,
-    paddingBottom: 10,
+    paddingTop: 10,
   },
   {
     name: "TypeScript",
@@ -44,13 +44,15 @@ const technologies: Technology[] = [
     logo: "/logos/techslider/nodejs.svg",
     width: 105,
     height: 120,
+    paddingTop: 35,
   },
   {
-    name: "RESTfulAPIs",
+    name: "RESTful APIs",
     logo: "/logos/techslider/restfulapi.svg",
     width: 70,
     height: 70,
-    paddingBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
   },
   { name: "Git", logo: "/logos/techslider/git.svg", width: 75, height: 100 },
   {
@@ -60,7 +62,7 @@ const technologies: Technology[] = [
     height: 100,
   },
   {
-    name: "PostMan",
+    name: "Postman",
     logo: "/logos/techslider/postman.svg",
     width: 75,
     height: 100,
@@ -68,11 +70,11 @@ const technologies: Technology[] = [
   {
     name: "Tailwind CSS",
     logo: "/logos/techslider/tailwind.svg",
-    width: 75,
+    width: 95,
     height: 100,
   },
   {
-    name: "ChakraUI",
+    name: "Chakra UI",
     logo: "/logos/techslider/chakraui.svg",
     width: 75,
     height: 100,
@@ -82,9 +84,16 @@ const technologies: Technology[] = [
     logo: "/logos/techslider/html5.svg",
     width: 75,
     height: 100,
+    paddingTop: 5,
   },
-  { name: "CSS", logo: "/logos/techslider/css3.svg", width: 75, height: 100 },
-  { name: "SASS", logo: "/logos/techslider/sass.svg", width: 75, height: 100 },
+  { name: "CSS3", logo: "/logos/techslider/css3.svg", width: 85, height: 100 },
+  {
+    name: "Sass",
+    logo: "/logos/techslider/sass.svg",
+    width: 85,
+    height: 100,
+    paddingTop: 18,
+  },
 ];
 
 const TechSlider: React.FC = () => {
@@ -92,6 +101,21 @@ const TechSlider: React.FC = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (slider) {
+      const handleScroll = () => {
+        if (slider.scrollLeft === 0) {
+          slider.scrollLeft = slider.scrollWidth / 2;
+        } else if (slider.scrollLeft >= slider.scrollWidth / 2) {
+          slider.scrollLeft = 1;
+        }
+      };
+      slider.addEventListener("scroll", handleScroll);
+      return () => slider.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
@@ -115,18 +139,26 @@ const TechSlider: React.FC = () => {
 
   return (
     <div
-      className="w-full overflow-hidden rounded-2xl dark:bg-gray-800 pt-5 cursor-grab active:cursor-grabbing"
+      className="w-full overflow-hidden rounded-t-2xl dark:bg-gray-800  cursor-grab active:cursor-grabbing"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       onMouseMove={handleMouseMove}
       ref={sliderRef}
     >
-      <div className={`flex gap-2 w-max ${isDragging ? '' : 'animate-slide'}`}>
-        {[...technologies, ...technologies, ...technologies, ...technologies, ...technologies, ...technologies, ...technologies, ...technologies].map((tech, index) => (
+      <div
+        className={`flex space-x-4 w-max ${isDragging ? "" : "animate-slide"}`}
+      >
+        {[
+          ...technologies,
+          ...technologies,
+          ...technologies,
+          ...technologies,
+          ...technologies,
+        ].map((tech, index) => (
           <div
             key={index}
-            className="w-24 flex-shrink-0 pointer-events-none"
+            className="flex flex-col items-center justify-center w-24 flex-shrink-0"
             style={{
               paddingTop: tech.paddingTop || 0,
               paddingBottom: tech.paddingBottom || 0,
@@ -134,13 +166,17 @@ const TechSlider: React.FC = () => {
               paddingRight: tech.paddingRight || 0,
             }}
           >
-            <Image
-              src={tech.logo}
-              alt={tech.name}
-              width={tech.width}
-              height={tech.height}
-              className="object-contain"
-            />
+            <div
+              className="relative -m-5"
+              style={{ width: tech.width, height: tech.height }}
+            >
+              <Image
+                src={tech.logo}
+                alt={tech.name}
+                fill
+                className="object-contain pointer-events-none"
+              />
+            </div>
           </div>
         ))}
       </div>

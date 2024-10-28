@@ -65,7 +65,7 @@ export default function Resume() {
   return (
     <div className="max-w-4xl mx-auto">
       <section className="mb-12 flex flex-col gap-4 justify-evenly">
-      <h1 className="text-4xl font-bold mb-8 flex justify-center">
+      <h1 className="text-4xl font-bold mb-4 flex justify-center">
         À propos de moi
       </h1>
         <h2 className="flex justify-center text-2xl font-semibold mb-3 mt-5">
@@ -112,7 +112,7 @@ export default function Resume() {
         ))}
       </section>
       <section>
-        <h2 className="flex justify-center text-2xl font-semibold mb-4 mt-8">
+        <h2 className="text-4xl font-bold m-10 flex justify-center">
           Education
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
@@ -156,7 +156,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="flex justify-center text-3xl font-bold mb-6 mt-12 text-gray-100">
+        <h2 className="flex justify-center text-3xl font-bold mb-10 mt-12 text-gray-100">
           Mes centres d'intérêt
         </h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
@@ -190,10 +190,10 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="flex justify-center text-2xl font-semibold mb-6 mt-8">
+        <h2 className="text-4xl font-bold  flex justify-center mt-16 mb-8">
           Curriculum vitæ et Profil Professionnel
         </h2>
-        <div className="flex flex-wrap gap-4 justify-center mb-8">
+        <div className="flex flex-wrap gap-8 justify-center">
           <button
             onClick={handleCVBtn}
             className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
