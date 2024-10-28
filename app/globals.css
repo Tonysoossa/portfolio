@@ -98,12 +98,149 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-25%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
     transform: translateY(0);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-blink {
+  animation: blink 2.5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  20% {
+    transform: scaleY(0.8); /* Réduction pour simuler le clignement */
+  }
+  30%,
+  100% {
+    transform: scaleY(1); /* Taille normale pour le reste de la durée */
+  }
+}
+
+.animate-shake {
+  animation: shake 3s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.animate-fade-out {
+  position: relative; /* Nécessaire pour le positionnement */
+  animation: fadeOutSlide 3s infinite; /* Durée de l'animation et répétition infinie */
+}
+
+@keyframes fadeOutSlide {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-cat-move {
+  position: relative;
+  animation: catMove 10s infinite;
+}
+
+@keyframes catMove {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-moon-blink {
+  animation: moonBlink 5s infinite; /* Animation infinie de 2 secondes */
+}
+
+@keyframes moonBlink {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  70% {
+    opacity: 0.6;
+    filter: brightness(0.9);
+  }
+}
+
+.animate-sun-spin {
+  animation: sunSpin 16s linear infinite;
+}
+
+@keyframes sunSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-flip {
+  display: inline-block;
+  animation: flip 8s infinite; /* Animation de flip avec un cycle total de 12 secondes */
+}
+
+/* Définition de l'animation de flip */
+@keyframes flip {
+  0%, 100% {
+    transform: rotateY(0deg); /* Position initiale */
+  }
+  15% {
+    transform: rotateY(180deg); /* Retourne l'élément sur l'axe Y */
+  }
+  75% {
+    transform: rotateY(180deg); /* Reste à l'envers */
+  }
+  90% {
+    transform: rotateY(0deg); /* Retourne à la position initiale */
   }
 }

@@ -16,8 +16,8 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
-      <h1 className="text-5xl md:text-7xl text-center font-bold mb-4 text-animated dark:text-white h-24">
+    <div className="flex flex-col items-center justify-center max-w-4xl  mx-auto">
+      <h1 className="text-5xl md:text-7xl text-center font-bold mb-4 text-animated dark:text-white h-24 mt-20">
         Servanin Tony
       </h1>
       <h2 className="text-3xl md:text-5xl dark:text-blue-400 mb-12 sm:mb-6 text-center text-animated">
@@ -32,7 +32,7 @@ export default function Home() {
       </p>
       <button
         onClick={handleScrollToProjects}
-        className="flex text-justifyp-2 h-16 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
+        className="flex text-justifyp-2 h-14 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
       >
         <FontAwesomeIcon
           icon={faArrowDownLong}

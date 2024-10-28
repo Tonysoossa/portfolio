@@ -62,8 +62,8 @@ export default function Projects() {
   projects.sort((a, b) => parseInt(b.date) - parseInt(a.date));
   
   return (
-    <div className="space-y-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+    <div className="space-y-16">
+      <h1 className="text-4xl font-bold text-center">
         {language === 'fr' ? 'Mes Projets' : 'My Projects'}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,7 +104,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <h1 className="text-4xl font-bold mb-8 flex justify-center">
+      <h1 className="text-4xl font-bold flex justify-center ">
         {language === 'fr' ? 'Mes outils de travail' : 'My Work Tools'}
       </h1>
       <TechSlider />

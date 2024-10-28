@@ -36,7 +36,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Appel initial pour définir la section active
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -68,24 +68,29 @@ export default function Navbar() {
             className="text-xl font-bold flex items-center"
           >
             Tony's Portfolio
-            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 ml-2" />
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="w-6 h-6 ml-2 animate-cat-move"
+            />
           </Link>
 
-          <div className="flex items-center space-x-4">
+          <div className="relative left-16 mx-auto flex space-x-4">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-full bg-gray-700 text-gray-200 transition-colors duration-200"
+              className="w-10 h-10 rounded-full bg-gray-700 text-gray-200 transition-colors duration-200 flex justify-center items-center"
             >
               <FontAwesomeIcon
                 icon={darkMode ? faSun : faMoon}
-                className="w-5 h-5"
+                className={`w-5 h-5 ${
+                  darkMode ? "animate-sun-spin" : "animate-moon-blink"
+                }`}
               />
             </button>
             <button
               onClick={toggleLanguage}
-              className="p-2 rounded-full bg-gray-700 text-gray-200 transition-colors duration-200"
+              className="w-10 h-10 rounded-full bg-gray-700 text-gray-200 transition-colors duration-200 flex justify-center items-center"
             >
-              <FontAwesomeIcon icon={faLanguage} className="w-5 h-5" />
+              <FontAwesomeIcon icon={faLanguage} className="w-5 h-5 icon-flip" />
             </button>
           </div>
 
