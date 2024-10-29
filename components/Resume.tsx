@@ -236,7 +236,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mt-16 mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mt-16 mb-10 text-center">
           {language === "fr"
             ? "Curriculum vitæ et Profil Professionnel"
             : "Curriculum Vitae and Professional Profile"}
