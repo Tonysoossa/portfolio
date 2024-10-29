@@ -47,7 +47,7 @@ export default function Navbar() {
     const element = document.querySelector(path);
     if (element) {
       const navbarHeight = 64;
-      const paddingTop = 30;
+      const paddingTop = 20;
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -132,7 +132,6 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-
           </div>
         </div>
       )}

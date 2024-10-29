@@ -117,7 +117,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="flex text-3xl md:text-4xl font-semibold mb-8 justify-center">
+        <h2 className="flex text-3xl md:text-4xl font-semibold mb-8 justify-center text-center">
           {language === "fr"
             ? "Expérience Professionnelle"
             : "Professional Experience"}
@@ -209,7 +209,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="text-3xl md:text-4xl font-bold m-10 flex justify-center text-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold m-10 flex justify-center text-center text-gray-100">
           {language === "fr" ? "Mes centres d'intérêt" : "My Interests"}
         </h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">

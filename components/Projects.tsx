@@ -91,7 +91,7 @@ export default function Projects() {
                   <a
                     target="_blank"
                     href={project.link}
-                    className="text-blue-400 hover:underline"
+                    className="text-blue-400 hover:underline md:no-underline underline "
                   >
                     {language === "fr" ? "Voir le Projet" : "View Project"}
                   </a>
@@ -100,7 +100,7 @@ export default function Projects() {
                 <a
                   target="_blank"
                   href={project.github}
-                  className="text-blue-400 hover:underline"
+                  className="text-blue-400 hover:underline md:no-underline underline"
                 >
                   Github Repo
                 </a>
@@ -111,7 +111,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-bold flex justify-center ">
+      <h1 className="text-4xl md:text-5xl font-bold flex justify-center text-center ">
         {language === "fr" ? "Mes outils de travail" : "My Work Tools"}
       </h1>
       <TechSlider />
