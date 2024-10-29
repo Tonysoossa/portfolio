@@ -109,7 +109,7 @@ export default function Resume() {
           {personalSkills.map((pSkill, index) => (
             <span
               key={index}
-              className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+              className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm"
             >
               {pSkill}
             </span>
@@ -126,7 +126,7 @@ export default function Resume() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="mb-8 bg-gray-900 p-6 rounded-lg shadow-lg w-full md:w-1/2"
+              className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2"
             >
               <h3 className="text-xl font-semibold">{exp.title}</h3>
               <p className="text-blue-400">{exp.company}</p>
@@ -197,7 +197,7 @@ export default function Resume() {
             src="/logos/education/openclassroom.webp"
             alt="OpenClassrooms Logo"
             link="https://openclassrooms.com/fr/"
-            company="OpenClassrooms"
+            company="OCR"
             degres={
               language === "fr"
                 ? "Intégrateur Web Javascript diplôme de niveau 5"
@@ -213,7 +213,7 @@ export default function Resume() {
           {language === "fr" ? "Mes centres d'intérêt" : "My Interests"}
         </h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
-          <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full md:w-1/2">
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2">
             <h3 className="text-xl font-semibold text-center text-white mb-4">
               {language === "fr" ? "Professionnels" : "Professional"}
             </h3>
@@ -223,7 +223,7 @@ export default function Resume() {
                 : "Passionate about front-end development, I aspire to improve by working on projects using various technologies and libraries. My goal is to master every aspect of the tools I use, while expanding my skills towards full-stack development. I am open to any professional opportunity that will allow me to achieve these ambitions, whether in apprenticeship, full-time employment, or freelance."}
             </p>
           </div>
-          <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full md:w-1/2">
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2">
             <h3 className="text-xl font-semibold text-center text-white mb-4">
               {language === "fr" ? "Personnels" : "Personal"}
             </h3>

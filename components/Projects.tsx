@@ -8,33 +8,33 @@ const projects = [
   {
     title: "Kasa",
     description: {
-      fr: "description en français",
-      en: "description in English",
+      fr: "Site de recherche d'appartements sur un site fictif.",
+      en: "Apartment search site on a fictional platform.",
     },
     date: "2024",
-    image: "/icons/placeholder.svg",
+    image: "/project_photo/kasa.webp",
     link: "#",
     github: "https://github.com/Tonysoossa/OCR_Kaza",
   },
   {
-    title: "Argent-bank ? ",
+    title: "Argent-bank",
     description: {
-      fr: "description en français",
-      en: "description in English",
+      fr: "Application bancaire fictive.",
+      en: "Fictional banking application.",
     },
     date: "2024",
-    image: "/icons/placeholder.svg",
+    image: "/project_photo/argent-bank.webp",
     link: "#",
     github: "https://github.com/Tonysoossa/project_10-Argent-Bank",
   },
   {
     title: "Car-Hub",
     description: {
-      fr: "description en français",
-      en: "description in English",
+      fr: "Site de référencement de voitures, utilisant une API en ligne.",
+      en: "Car listing site using an online API.",
     },
     date: "2023",
-    image: "/icons/placeholder.svg",
+    image: "/project_photo/car-hub.png",
     link: "https://car-showcase-project-ivory.vercel.app/",
     github: "https://github.com/Tonysoossa/car_showcase-project",
   },
@@ -70,7 +70,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 cursor-pointer"
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 cursor-pointer flex flex-col justify-between"
           >
             <Image
               src={project.image}
@@ -79,35 +79,38 @@ export default function Projects() {
               height={200}
               className="w-full h-48 object-cover"
             />
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-400 mb-3">
+              <p className="text-gray-400  flex-grow">
                 {project.description[language]}
               </p>
-              <div className="flex gap-3 justify-center">
+            </div>
+            <div className="p-6 flex justify-between items-center">
+              <div className="flex gap-3">
+                {project.link !== "#" && (
+                  <a
+                    target="_blank"
+                    href={project.link}
+                    className="text-blue-400 hover:underline"
+                  >
+                    {language === "fr" ? "Voir le Projet" : "View Project"}
+                  </a>
+                )}
+                {project.link !== "#" && <span>|</span>}
                 <a
-                  target="blank"
-                  href={project.link}
-                  className="text-blue-400 hover:underline"
-                >
-                  {language === "fr" ? "Voir le Projet" : "View Project"}
-                </a>
-                <span>|</span>
-                <a
-                  target="blank"
+                  target="_blank"
                   href={project.github}
                   className="text-blue-400 hover:underline"
                 >
                   Github Repo
                 </a>
               </div>
+              <p className="text-gray-400 text-sm pt-1">{project.date}</p>
             </div>
-            <p className="mb-3 -mt-5 mr-4 flex flex-row-reverse text-gray-400">
-              {project.date}
-            </p>
           </div>
         ))}
       </div>
+
       <h1 className="text-4xl md:text-5xl font-bold flex justify-center ">
         {language === "fr" ? "Mes outils de travail" : "My Work Tools"}
       </h1>

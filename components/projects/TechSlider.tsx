@@ -139,7 +139,7 @@ const TechSlider: React.FC = () => {
 
   return (
     <div
-      className="w-full overflow-hidden rounded-t-2xl dark:bg-gray-800  cursor-grab active:cursor-grabbing"
+      className="w-full overflow-hidden rounded-t-2xl bg-gray-800  cursor-grab active:cursor-grabbing"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
