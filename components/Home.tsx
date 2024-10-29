@@ -32,12 +32,12 @@ export default function Home() {
       </p>
       <button
         onClick={handleScrollToProjects}
-        className="flex text-justifyp-2 h-14 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
+        className=" flex h-14 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
       >
         <FontAwesomeIcon
           icon={faArrowDownLong}
           size="2xl"
-          className="pt-4 animate-bounce"
+          className="pt-4 pl-[0.5px] animate-bounce"
         />
       </button>
     </div>
