@@ -20,7 +20,7 @@ export default function Home() {
       <h1 className="text-5xl md:text-7xl text-center font-bold mb-4 text-animated dark:text-white h-24 mt-20">
         Servanin Tony
       </h1>
-      <h2 className="text-3xl md:text-5xl dark:text-blue-400 mb-12 sm:mb-6 text-center text-animated">
+      <h2 className="text-3xl md:text-5xl dark:text-blue-400 mb-12 sm:mb-6 text-center text-fadeInUp lg:whitespace-nowrap">
         {language === "fr"
           ? "Développeur Frontend Javascript React"
           : "Javascript React Frontend Developer"}

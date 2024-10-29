@@ -158,7 +158,7 @@ const TechSlider: React.FC = () => {
         ].map((tech, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center w-24 flex-shrink-0"
+            className="flex flex-col items-center justify-center w-24 flex-shrink-0 no-highlights"
             style={{
               paddingTop: tech.paddingTop || 0,
               paddingBottom: tech.paddingBottom || 0,

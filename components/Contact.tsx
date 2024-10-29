@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div className="max-w-2xl mx-auto relative">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+      <h1 className="text-4xl font-bold mt-14 mb-8 text-center">
         {language === 'fr' ? 
           "Démarrons un projet ensemble, n'hésitez pas à me contacter" :
           "Let's start a project together, don't hesitate to contact me"}

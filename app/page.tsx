@@ -15,7 +15,7 @@ export default function Page() {
       <section id="resume" className="min-h-screen">
         <Resume />
       </section>
-      <section id="contact" className="min-h-screen">
+      <section id="contact" className="min-h-70vh">
         <Contact />
       </section>
     </div>

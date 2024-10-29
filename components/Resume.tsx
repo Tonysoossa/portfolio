@@ -9,18 +9,34 @@ import { useLanguage } from "../contexts/LanguageContext";
 export default function Resume() {
   const { language } = useLanguage();
 
-  const personalSkills = [
-    "Communication",
-    "Proactivité",
-    "Patience",
-    "Autonomie",
-    "Délibéré",
-    "Rigueur",
-    "Ambition",
-    "Persévérance",
-    `Esprit d'initiative`,
-    "Optimisme",
-  ];
+  const translations = {
+    en: [
+      "Communication",
+      "Proactivity",
+      "Patience",
+      "Autonomy",
+      "Deliberate",
+      "Rigor",
+      "Ambition",
+      "Perseverance",
+      "Initiative",
+      "Optimism",
+    ],
+    fr: [
+      "Communication",
+      "Proactivité",
+      "Patience",
+      "Autonomie",
+      "Délibéré",
+      "Rigueur",
+      "Ambition",
+      "Persévérance",
+      `Esprit d'initiative`,
+      "Optimisme",
+    ],
+  };
+
+  const personalSkills = language === "en" ? translations.en : translations.fr;
 
   const experiences = [
     {
@@ -83,10 +99,10 @@ export default function Resume() {
   return (
     <div id="resume" className="max-w-4xl mx-auto">
       <section className="mb-12 flex flex-col gap-4 justify-evenly">
-        <h1 className="text-4xl font-bold mb-4 flex justify-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 flex justify-center">
           {language === "fr" ? "À propos de moi" : "About me"}
         </h1>
-        <h2 className="flex justify-center text-2xl font-semibold mb-3 mt-5">
+        <h2 className="flex justify-center text-3xl md:text-4xl font-semibold mb-4 mt-5">
           {language === "fr" ? "Compétences" : "Skills"}
         </h2>
         <div className="flex flex-wrap justify-center gap-3">
@@ -101,38 +117,48 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="flex text-2xl font-semibold mb-4 justify-center">
+        <h2 className="flex text-3xl md:text-4xl font-semibold mb-8 justify-center">
           {language === "fr"
             ? "Expérience Professionnelle"
             : "Professional Experience"}
         </h2>
-        {experiences.map((exp, index) => (
-          <div key={index} className="mb-8">
-            <h3 className="text-xl font-semibold">{exp.title}</h3>
-            <p className="text-blue-400">{exp.company}</p>
-            <p className="text-sm text-gray-400 mb-2">{exp.period}</p>
-            <ul className="list-disc list-inside">
-              {exp.responsibilities.map((resp, idx) => (
-                <li key={idx} className="text-gray-300">
-                  {resp}
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-xl font-semibold pb-2 pt-2">
-              {language === "fr" ? "Compétences acquises" : "Acquired Skills"}
-            </h3>
-            <ul className="list-disc list-inside">
-              {exp.competences.map((comp, idx) => (
-                <li key={idx} className="text-gray-300">
-                  {comp}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="flex flex-col justify-between  md:flex-row items-start gap-8">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="mb-8 bg-gray-900 p-6 rounded-lg shadow-lg w-full md:w-1/2"
+            >
+              <h3 className="text-xl font-semibold">{exp.title}</h3>
+              <p className="text-blue-400">{exp.company}</p>
+              <p className="text-sm text-gray-400 mb-2">{exp.period}</p>
+
+              <ul className="list-disc list-inside pl-0">
+                {exp.responsibilities.map((resp, idx) => (
+                  <li key={idx} className="text-gray-300 flex items-start">
+                    <span className="mr-2">•</span> <span>{resp}</span>{" "}
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="text-xl font-semibold pb-2 pt-2">
+                {language === "fr" ? "Compétences acquises" : "Acquired Skills"}
+              </h3>
+
+              <ul className="list-disc list-inside pl-0">
+                {exp.competences.map((comp, idx) => (
+                  <li key={idx} className="text-gray-300 flex items-start">
+                    <span className="mr-2">•</span>{" "}
+                    {/* Utilise un span pour afficher le bullet */}
+                    <span>{comp}</span> {/* Aligne le texte de la compétence */}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
       <section>
-        <h2 className="text-4xl font-bold m-10 flex justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold m-10 flex justify-center">
           {language === "fr" ? "Éducation" : "Education"}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -183,7 +209,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="text-3xl font-bold m-10 flex justify-center text-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold m-10 flex justify-center text-gray-100">
           {language === "fr" ? "Mes centres d'intérêt" : "My Interests"}
         </h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
@@ -210,7 +236,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="text-4xl font-bold flex justify-center mt-16 mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mt-16 mb-10">
           {language === "fr"
             ? "Curriculum vitæ et Profil Professionnel"
             : "Curriculum Vitae and Professional Profile"}
@@ -238,7 +264,10 @@ export default function Resume() {
             rel="noopener noreferrer"
             className="bg-blue-800 hover:bg-blue-900 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="mr-2 animate-fade-out" />
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="mr-2 animate-fade-out"
+            />
             LinkedIn
           </a>
           <a

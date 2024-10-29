@@ -28,6 +28,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.no-highlights {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @keyframes typewriter {
   from {
     width: 0;
@@ -60,7 +70,7 @@ body {
   width: fit-content;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .text-animated {
     white-space: nowrap;
     width: fit-content;
@@ -70,7 +80,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
-}
+} */
 
 .text-fadeInUp {
   display: inline-block;
@@ -231,7 +241,8 @@ body {
 
 /* Définition de l'animation de flip */
 @keyframes flip {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotateY(0deg); /* Position initiale */
   }
   15% {
