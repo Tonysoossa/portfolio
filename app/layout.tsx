@@ -10,6 +10,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Servanin Tony Portfolio",
   description: "A showcase of my work and skills as a frontend developer",
+  keywords: [
+    "Servanin Tony",
+    "frontend developer",
+    "portfolio",
+    "React developer",
+    "Lyon",
+    "France",
+    "JavaScript",
+    "Typescript",
+    "HTML",
+    "CSS",
+  ],
 };
 
 export default function RootLayout({
