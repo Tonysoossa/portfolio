@@ -42,7 +42,8 @@ export default function Resume() {
     {
       title: language === "fr" ? "Agent de maintenance" : "Maintenance Agent",
       company: "SNCF",
-      period: "Sept 2014 - Août 2017",
+      period:
+        language === "fr" ? "Sept 2014 - Août 2017" : "Sept 2014 - Aug 2017",
       responsibilities: [
         language === "fr"
           ? "Formation en alternance"
@@ -66,7 +67,7 @@ export default function Resume() {
     {
       title: language === "fr" ? "Sportif sponsorisé" : "Sponsored Athlete",
       company: "ABS Lyon",
-      period: "Sept 2017 - Dec 2023",
+      period: "Sept 2017 - Oct 2022",
       responsibilities: [
         language === "fr"
           ? "Sponsorisé par un skateshop Lyonnais"
@@ -83,6 +84,36 @@ export default function Resume() {
         language === "fr"
           ? "Gestion du stress et prise de risques"
           : "Stress management and risk-taking",
+      ],
+    },
+    {
+      title:
+        language === "fr"
+          ? "Apprentissage autodidacte"
+          : "Self-taught learning",
+      company: "Cours en ligne",
+      period: language === "fr" ? "Déc 2022 - Aujourd'hui" : "Dec 2022 - Today",
+      responsibilities: [
+        language === "fr"
+          ? "Suivi de cours en ligne sur des plateformes telles que Udemy, Codecademy, FreeCodeCamp, YouTube."
+          : "Followed online courses on platforms such as Udemy, Codecademy, FreeCodeCamp, YouTube.",
+        language === "fr"
+          ? "Prise de connaissance de sites open source, comme MDN, Stack Overflow, W3Schools, GitHub."
+          : "Familiarized with open-source sites, such as MDN, Stack Overflow, W3Schools, GitHub.",
+      ],
+      competences: [
+        language === "fr"
+          ? "Résolution de problèmes et débogage"
+          : "Problem-solving and debugging",
+        language === "fr"
+          ? "Utilisation des ressources documentaires"
+          : "Using documentation resources",
+        language === "fr"
+          ? "Autonomie et gestion du temps"
+          : "Self-management and time organization",
+        language === "fr"
+          ? "Trouver des solutions et s'adapter"
+          : "Finding solutions and adapting",
       ],
     },
   ];
@@ -122,11 +153,11 @@ export default function Resume() {
             ? "Expérience Professionnelle"
             : "Professional Experience"}
         </h2>
-        <div className="flex flex-col justify-between  md:flex-row items-start gap-8">
+        <div className="flex flex-wrap justify-between gap-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2"
+              className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-[calc(50%-1rem)]"
             >
               <h3 className="text-xl font-semibold">{exp.title}</h3>
               <p className="text-blue-400">{exp.company}</p>
@@ -135,7 +166,7 @@ export default function Resume() {
               <ul className="list-disc list-inside pl-0">
                 {exp.responsibilities.map((resp, idx) => (
                   <li key={idx} className="text-gray-300 flex items-start">
-                    <span className="mr-2">•</span> <span>{resp}</span>{" "}
+                    <span className="mr-2">•</span> <span>{resp}</span>
                   </li>
                 ))}
               </ul>
@@ -147,9 +178,7 @@ export default function Resume() {
               <ul className="list-disc list-inside pl-0">
                 {exp.competences.map((comp, idx) => (
                   <li key={idx} className="text-gray-300 flex items-start">
-                    <span className="mr-2">•</span>{" "}
-                    {/* Utilise un span pour afficher le bullet */}
-                    <span>{comp}</span> {/* Aligne le texte de la compétence */}
+                    <span className="mr-2">•</span> <span>{comp}</span>
                   </li>
                 ))}
               </ul>
