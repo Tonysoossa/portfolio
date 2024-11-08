@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Exo_2 } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/../components/Navbar";
 import Footer from "@/../components/Footer";
 import { LanguageProvider } from "../contexts/LanguageContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const exo2 = Exo_2({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Servanin Tony Portfolio",
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className} scroll-pt-20`}>
+    <html lang="en" className={`${exo2.className} scroll-pt-20`}>
       <LanguageProvider>
         <body className="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
           <Navbar />
