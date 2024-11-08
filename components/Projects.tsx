@@ -11,6 +11,7 @@ const projects = [
       fr: "Site de recherche d'appartements sur un site fictif.",
       en: "Apartment search site on a fictional platform.",
     },
+    techno: ["React", "SASS "],
     date: "2024",
     image: "/project_photo/kasa.webp",
     link: "#",
@@ -22,6 +23,7 @@ const projects = [
       fr: "Application bancaire fictive.",
       en: "Fictional banking application.",
     },
+    techno: ["Typescript", "Redux Toolkit", "MongoDB"],
     date: "2024",
     image: "/project_photo/argent-bank.webp",
     link: "#",
@@ -33,6 +35,7 @@ const projects = [
       fr: "Site de référencement de voitures, utilisant une API en ligne.",
       en: "Car listing site using an online API.",
     },
+    techno: ["Next.js", "Typescript", "Tailwind", "RESTful API"],
     date: "2023",
     image: "/project_photo/car-hub.png",
     link: "https://car-showcase-project-ivory.vercel.app/",
@@ -81,17 +84,29 @@ export default function Projects() {
             />
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-400  flex-grow">
+              <p className="text-gray-400 flex-grow">
                 {project.description[language]}
               </p>
             </div>
+
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              {project.techno.map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-4 pt-[1px] pb-[2px] bg-gray-700 text-gray-200 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
             <div className="p-6 flex justify-between items-center">
               <div className="flex gap-3">
                 {project.link !== "#" && (
                   <a
                     target="_blank"
                     href={project.link}
-                    className="text-blue-400 hover:underline md:no-underline underline "
+                    className="text-blue-400 hover:underline md:no-underline underline"
                   >
                     {language === "fr" ? "Voir le Projet" : "View Project"}
                   </a>
