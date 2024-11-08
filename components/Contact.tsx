@@ -53,12 +53,12 @@ export default function Contact() {
 
   return (
     <div className="max-w-2xl mx-auto relative">
-      <h1 className="text-4xl font-bold mt-14 mb-8 text-center">
+      <h1 className="text-4xl font-bold mt-14 mb-20 text-center">
         {language === 'fr' ? 
           "Démarrons un projet ensemble, n'hésitez pas à me contacter" :
           "Let's start a project together, don't hesitate to contact me"}
       </h1>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-8">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
             {language === 'fr' ? 'Nom' : 'Name'}

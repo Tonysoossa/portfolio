@@ -133,7 +133,7 @@ export default function Resume() {
         <h1 className="text-4xl md:text-5xl font-bold mb-4 flex justify-center">
           {language === "fr" ? "À propos de moi" : "About me"}
         </h1>
-        <h2 className="flex justify-center text-3xl md:text-4xl font-semibold mb-4 mt-5">
+        <h2 className="flex justify-center text-3xl md:text-4xl font-semibold mb-6 mt-5">
           {language === "fr" ? "Compétences" : "Skills"}
         </h2>
         <div className="flex flex-wrap justify-center gap-3">
@@ -148,7 +148,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="flex text-3xl md:text-4xl font-semibold mb-8 justify-center text-center">
+        <h2 className="flex text-3xl md:text-4xl font-semibold mb-12 justify-center text-center">
           {language === "fr"
             ? "Expérience Professionnelle"
             : "Professional Experience"}
@@ -238,7 +238,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="text-3xl md:text-4xl font-bold m-10 flex justify-center text-center text-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold m-12 flex justify-center text-center text-gray-100">
           {language === "fr" ? "Mes centres d'intérêt" : "My Interests"}
         </h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
@@ -265,7 +265,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mt-16 mb-10 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mt-16 mb-12 text-center">
           {language === "fr"
             ? "Curriculum vitæ et Profil Professionnel"
             : "Curriculum Vitae and Professional Profile"}
