@@ -32,6 +32,11 @@ export default function Home() {
       </p>
       <button
         onClick={handleScrollToProjects}
+        aria-label={
+          language === "fr"
+            ? "Défiler vers la section suivante"
+            : "Scroll threw next section"
+        }
         className=" flex h-14 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
       >
         <FontAwesomeIcon
