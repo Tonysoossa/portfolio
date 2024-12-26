@@ -120,7 +120,7 @@ export default function Resume() {
 
   const handleCVBtn = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
+    link.href = "/pdf/cv.pdf";
     link.setAttribute("download", "CV-Servanin-Tony");
     document.body.appendChild(link);
     link.click();
@@ -281,10 +281,10 @@ export default function Resume() {
             />
             {language === "fr" ? "Télécharger CV" : "Download CV"}
           </button>
-          <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <Link href="/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">
             <button className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center">
               {language === "fr" ? "Voir CV" : "View CV"}
-              <FontAwesomeIcon icon={faEye} className="ml-2 animate-blink " />
+              <FontAwesomeIcon icon={faEye} className="ml-2 animate-blink" />
             </button>
           </Link>
           <a

@@ -16,10 +16,9 @@ export function Education({
   date,
   link,
   imageClassName,
-  
 }: EducationProps) {
   return (
-    <div className="flex flex-col relative bg-gray-800 p-4 rounded-lg h-full">
+    <div className="flex flex-col relative bg-gray-800 p-4 rounded-lg h-full cursor-pointer">
       <a
         href={link}
         className="inline-block w-fit"
