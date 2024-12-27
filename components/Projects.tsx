@@ -73,7 +73,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105 cursor-pointer flex flex-col justify-between"
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105  flex flex-col justify-between"
           >
             <Image
               src={project.image}

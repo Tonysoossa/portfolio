@@ -194,11 +194,10 @@ export default function Resume() {
           <Education
             src="/logos/education/sncf.webp"
             alt="SNCF Logo"
-            link="/"
             company="SNCF"
             degres="BEP"
             date="2016"
-            imageClassName="w-16 -pt-1 pb-1"
+            imageClassName="w-16 cursor-default -pt-1 pb-1"
           />
           <Education
             src="/logos/education/udemy.webp"
@@ -216,7 +215,7 @@ export default function Resume() {
           <Education
             src="/logos/education/codewars.webp"
             alt="Codewars Logo"
-            link="https://www.codewars.com/"
+            link="https://www.codewars.com/users/soossa"
             company="Codewars"
             degres="5 kyu"
             date={language === "fr" ? "2022-Aujourd'hui" : "2022-Present"}
@@ -229,11 +228,12 @@ export default function Resume() {
             company="OCR"
             degres={
               language === "fr"
-                ? "Intégrateur Web Javascript diplôme de niveau 5"
-                : "Javascript Web Integrator Level 5 Diploma"
+                ? "Intégrateur Web Javascript Diplôme de niveau 5"
+                : "Javascript Web Integrator Level 5 degre"
             }
             date="2024"
             imageClassName="w-[7rem] h-6 top-5"
+            diplome="/pdf/diplome_int_web.pdf"
           />
         </div>
       </section>
