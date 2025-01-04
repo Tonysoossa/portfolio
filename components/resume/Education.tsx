@@ -22,7 +22,7 @@ export function Education({
   imageClassName,
   diplome,
 }: EducationProps) {
-  const { language } = useLanguage();
+  const { translations } = useLanguage();
   return (
     <div className="flex flex-col relative bg-gray-800 p-4 rounded-lg h-full ">
       <a
@@ -54,7 +54,7 @@ export function Education({
             href={diplome}
             target="_blank"
           >
-            <p>{language === "fr" ? "Diplôme" : "Degre"}</p>
+            <p>{translations.projects.degre}</p>
             <svg
               aria-hidden="true"
               focusable="false"

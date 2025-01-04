@@ -7,15 +7,15 @@ import Link from "next/link";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Navbar() {
-  const { language, toggleLanguage } = useLanguage();
+  const { translations, toggleLanguage } = useLanguage();
   const [activeSection, setActiveSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: language === "fr" ? "Accueil" : "Home", path: "#home" },
-    { name: language === "fr" ? "Projets" : "Projects", path: "#projects" },
-    { name: language === "fr" ? "À Propos" : "About", path: "#resume" },
-    { name: language === "fr" ? "Contact" : "Contact", path: "#contact" },
+    { name: translations.nav.home, path: "#home" },
+    { name: translations.nav.projects, path: "#projects" },
+    { name: translations.nav.about, path: "#resume" },
+    { name: translations.nav.contact, path: "#contact" },
   ];
 
   useEffect(() => {
@@ -100,7 +100,7 @@ export default function Navbar() {
                 className="w-8 h-8 mr-2 icon-flip"
               />
               <span className="hidden md:inline">
-                {language === "fr" ? "FR" : "ENG"}
+                {translations.nav.language}
               </span>
             </button>
 

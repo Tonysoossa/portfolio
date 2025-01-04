@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Contact() {
-  const { language } = useLanguage();
+  const { translations } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,7 +22,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -37,20 +37,12 @@ export default function Contact() {
         "attwSkjADtRjxXset"
       )
       .then((result) => {
-        console.log(
-          language === "fr" ? "Email envoyé:" : "Email sent:",
-          result.text
-        );
+        console.log("Email sent:", result.text);
         setFormData({ name: "", email: "", message: "" });
         setStatus("success");
       })
       .catch((error) => {
-        console.error(
-          language === "fr"
-            ? "Erreur lors de l'envoi:"
-            : "Error sending email:",
-          error.text
-        );
+        console.error("Error sending email:", error.text);
         setStatus("error");
       });
   };
@@ -62,14 +54,12 @@ export default function Contact() {
   return (
     <div className="max-w-2xl mx-auto relative">
       <h1 className="text-4xl font-bold mt-14 mb-20 text-center">
-        {language === "fr"
-          ? "Démarrons un projet ensemble, n'hésitez pas à me contacter"
-          : "Let's start a project together, don't hesitate to contact me"}
+        {translations.contact.title}
       </h1>
       <form onSubmit={handleSubmit} className="space-y-8">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
-            {language === "fr" ? "Qui êtes vous ?" : "Who are you ?"}
+            {translations.contact.name}
           </label>
           <input
             type="text"
@@ -83,7 +73,7 @@ export default function Contact() {
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-2">
-            {language === "fr" ? "Votre Email :" : "Your Mail :"}
+            {translations.contact.mail}
           </label>
           <input
             type="email"
@@ -97,9 +87,7 @@ export default function Contact() {
         </div>
         <div>
           <label htmlFor="message" className="block text-sm font-medium mb-2">
-            {language === "fr"
-              ? "Laissez moi un message !"
-              : "Leave me a message !"}
+            {translations.contact.message}
           </label>
           <textarea
             id="message"
@@ -115,7 +103,7 @@ export default function Contact() {
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-colors"
         >
-          {language === "fr" ? "Envoyer !" : "Send !"}
+          {translations.contact.submit}
         </button>
       </form>
 
@@ -138,14 +126,10 @@ export default function Contact() {
                   />
                 </svg>
                 <h3 className="mt-2 text-xl font-medium text-gray-100">
-                  {language === "fr"
-                    ? "Message envoyé avec succès !"
-                    : "Message sent successfully!"}
+                  {translations.contact.success}
                 </h3>
                 <p className="mt-1 text-sm text-gray-400">
-                  {language === "fr"
-                    ? "Merci pour votre message. Je vous répondrai dans les plus brefs délais."
-                    : "Thank you for your message. I will reply to you as soon as possible."}
+                  {translations.contact.successReply}
                 </p>
               </div>
             ) : (
@@ -164,14 +148,10 @@ export default function Contact() {
                   />
                 </svg>
                 <h3 className="mt-2 text-xl font-medium text-gray-100">
-                  {language === "fr"
-                    ? "Erreur lors de l'envoi"
-                    : "Error sending message"}
+                  {translations.contact.error}
                 </h3>
                 <p className="mt-1 text-sm text-gray-400">
-                  {language === "fr"
-                    ? "Désolé, une erreur s'est produite. Veuillez réessayer plus tard."
-                    : "Sorry, an error occurred. Please try again later."}
+                  {translations.contact.errorMessage}
                 </p>
               </div>
             )}
@@ -179,7 +159,7 @@ export default function Contact() {
               onClick={closeModal}
               className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-colors"
             >
-              {language === "fr" ? "Fermer" : "Close"}
+              {translations.contact.closeErrorModal}
             </button>
           </div>
         </div>

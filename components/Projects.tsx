@@ -4,45 +4,6 @@ import TechSlider from "./projects/TechSlider";
 import TechList from "./projects/TechList";
 import { useLanguage } from "../contexts/LanguageContext";
 
-const projects = [
-  {
-    title: "Kasa",
-    description: {
-      fr: "Site de recherche d'appartements sur un site fictif.",
-      en: "Apartment search site on a fictional platform.",
-    },
-    techno: ["React", "SASS "],
-    date: "2024",
-    image: "/project_photo/kasa.webp",
-    link: "#",
-    github: "https://github.com/Tonysoossa/OCR_Kaza",
-  },
-  {
-    title: "Argent-bank",
-    description: {
-      fr: "Application bancaire fictive.",
-      en: "Fictional banking application.",
-    },
-    techno: ["Typescript", "Redux Toolkit", "MongoDB"],
-    date: "2024",
-    image: "/project_photo/argent-bank.webp",
-    link: "#",
-    github: "https://github.com/Tonysoossa/project_10-Argent-Bank",
-  },
-  {
-    title: "Car-Hub",
-    description: {
-      fr: "Site de référencement de voitures, utilisant une API en ligne.",
-      en: "Car listing site using an online API.",
-    },
-    techno: ["Next.js", "Typescript", "Tailwind", "RESTful API"],
-    date: "2023",
-    image: "/project_photo/car-hub.png",
-    link: "https://car-showcase-project-ivory.vercel.app/",
-    github: "https://github.com/Tonysoossa/car_showcase-project",
-  },
-];
-
 const technNames = [
   { name: "JavaScript" },
   { name: "React" },
@@ -61,13 +22,43 @@ const technNames = [
 ];
 
 export default function Projects() {
-  const { language } = useLanguage();
+  const { translations } = useLanguage();
+  const projects = [
+    {
+      title: "Kasa",
+      description: translations.projects.boxes.description1,
+      techno: ["React", "SASS "],
+      date: "2024",
+      image: "/project_photo/kasa.webp",
+      link: "#",
+      github: "https://github.com/Tonysoossa/OCR_Kaza",
+    },
+    {
+      title: "Argent-bank",
+      description: translations.projects.boxes.description2,
+      techno: ["Typescript", "Redux Toolkit", "MongoDB"],
+      date: "2024",
+      image: "/project_photo/argent-bank.webp",
+      link: "#",
+      github: "https://github.com/Tonysoossa/project_10-Argent-Bank",
+    },
+    {
+      title: "Car-Hub",
+      description: translations.projects.boxes.description3,
+      techno: ["Next.js", "Typescript", "Tailwind", "RESTful API"],
+      date: "2023",
+      image: "/project_photo/car-hub.png",
+      link: "https://car-showcase-project-ivory.vercel.app/",
+      github: "https://github.com/Tonysoossa/car_showcase-project",
+    },
+  ];
+
   projects.sort((a, b) => parseInt(b.date) - parseInt(a.date));
 
   return (
     <div className="space-y-16">
       <h1 className="text-4xl font-bold text-center">
-        {language === "fr" ? "Mes Projets" : "My Projects"}
+        {translations.projects.title}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
@@ -84,9 +75,7 @@ export default function Projects() {
             />
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-400 flex-grow">
-                {project.description[language]}
-              </p>
+              <p className="text-gray-400 flex-grow">{project.description}</p>
             </div>
 
             <div className="flex justify-center items-center gap-2 flex-wrap">
@@ -108,7 +97,7 @@ export default function Projects() {
                     href={project.link}
                     className="text-blue-400 hover:underline md:no-underline underline"
                   >
-                    {language === "fr" ? "Voir le Projet" : "View Project"}
+                    {translations.projects.title}
                   </a>
                 )}
                 {project.link !== "#" && <span>|</span>}
@@ -127,7 +116,7 @@ export default function Projects() {
       </div>
 
       <h1 className="text-4xl md:text-5xl font-bold flex justify-center text-center ">
-        {language === "fr" ? "Mes outils de travail" : "My Work Tools"}
+        {translations.projects.tools}
       </h1>
       <TechSlider />
       <TechList technName={technNames} />
