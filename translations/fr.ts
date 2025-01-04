@@ -39,7 +39,7 @@ const fr = {
     closeErrorModal: "Fermer",
   },
   resume: {
-    personalSkills: [
+    skillsTranslations: [
       "Communication",
       "Proactivité",
       "Patience",
@@ -57,15 +57,15 @@ const fr = {
         company: "SNCF",
         period: "Sept 2014 - Août 2017",
         responsibilities: {
-          1: "Formation en alternance",
-          2: "Micro-mécanique et soudure sur carte électronique",
-          3: "Maintenance Moto-ventillateur et tests en cabine",
+          0: "Formation en alternance",
+          1: "Micro-mécanique et soudure sur carte électronique",
+          2: "Maintenance Moto-ventillateur et tests en cabine",
         },
         competences: {
-          1: "Travail en équipe",
-          2: "Importance de la sécurité",
-          3: "Responsabilité",
-          4: "Introduction a la hiérarchie professionnelle",
+          0: "Travail en équipe",
+          1: "Importance de la sécurité",
+          2: "Responsabilité",
+          3: "Introduction a la hiérarchie professionnelle",
         },
       },
       exp2: {
@@ -73,13 +73,13 @@ const fr = {
         company: "ABS Lyon",
         period: "Sept 2017 - Oct 2022",
         responsibilities: {
-          1: "Sponsorisé par un skateshop Lyonnais",
-          2: "Skateur flowteam chez DC skateboarding, Fred Perry",
+          0: "Sponsorisé par un skateshop Lyonnais",
+          1: "Skateur flowteam chez DC skateboarding, Fred Perry",
         },
         competences: {
-          1: "Discipline et Rigueur",
-          2: "Communication, savoir se vendre",
-          3: "Gestion du stress et prise de risques",
+          0: "Discipline et Rigueur",
+          1: "Communication, savoir se vendre",
+          2: "Gestion du stress et prise de risques",
         },
       },
       exp3: {
@@ -87,20 +87,21 @@ const fr = {
         company: "Cours en ligne",
         period: "Déc 2022 - Aujourd'hui",
         responsibilities: {
-          1: "Suivi de cours en ligne sur des plateformes telles que Udemy, Codecademy, FreeCodeCamp, YouTube.",
-          2: "Prise de connaissance de sites open source, comme MDN, Stack Overflow, W3Schools, GitHub.",
+          0: "Suivi de cours en ligne sur des plateformes telles que Udemy, Codecademy, FreeCodeCamp, YouTube.",
+          1: "Prise de connaissance de sites open source, comme MDN, Stack Overflow, W3Schools, GitHub.",
         },
         competences: {
-          1: "Résolution de problèmes et débogage",
-          2: "Utilisation des ressources documentaires",
-          3: "Autonomie et gestion du temps",
-          4: "Trouver des solutions et s'adapter",
+          0: "Résolution de problèmes et débogage",
+          1: "Utilisation des ressources documentaires",
+          2: "Autonomie et gestion du temps",
+          3: "Trouver des solutions et s'adapter",
         },
       },
     },
     about: "À propos de moi",
     skills: "Compétences",
     xp: "Expérience Professionnelle",
+    acquiredSkills: 'Compétences acquises',
     education: {
       title: "Éducation",
       degres: {

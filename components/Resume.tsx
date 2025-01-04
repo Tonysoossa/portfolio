@@ -9,114 +9,66 @@ import { useLanguage } from "../contexts/LanguageContext";
 export default function Resume() {
   const { translations } = useLanguage();
 
-  // const skillsTranslations = {
-  //   en: [
-  //     "Communication",
-  //     "Proactivity",
-  //     "Patience",
-  //     "Autonomy",
-  //     "Deliberate",
-  //     "Rigor",
-  //     "Ambition",
-  //     "Perseverance",
-  //     "Initiative",
-  //     "Optimism",
-  //   ],
-  //   fr: [
-  //     "Communication",
-  //     "Proactivité",
-  //     "Patience",
-  //     "Autonomie",
-  //     "Délibéré",
-  //     "Rigueur",
-  //     "Ambition",
-  //     "Persévérance",
-  //     `Esprit d'initiative`,
-  //     "Optimisme",
-  //   ],
-  // };
+  const personalSkills = [
+    translations.resume.skillsTranslations[0],
+    translations.resume.skillsTranslations[1],
+    translations.resume.skillsTranslations[2],
+    translations.resume.skillsTranslations[3],
+    translations.resume.skillsTranslations[4],
+    translations.resume.skillsTranslations[5],
+    translations.resume.skillsTranslations[6],
+    translations.resume.skillsTranslations[7],
+    translations.resume.skillsTranslations[8],
+    translations.resume.skillsTranslations[9],
+  ];
 
-  // const personalSkills = language === "en" ? skillsTranslations.en : skillsTranslations.fr;
-
-  // const experiences = [
-  //   {
-  //     title: language === "fr" ? "Agent de maintenance" : "Maintenance Agent",
-  //     company: "SNCF",
-  //     period:
-  //       language === "fr" ? "Sept 2014 - Août 2017" : "Sept 2014 - Aug 2017",
-  //     responsibilities: [
-  //       language === "fr"
-  //         ? "Formation en alternance"
-  //         : "Apprenticeship training",
-  //       language === "fr"
-  //         ? "Micro-mécanique et soudure sur carte électronique"
-  //         : "Micro-mechanics and soldering on electronic boards",
-  //       language === "fr"
-  //         ? "Maintenance Moto-ventillateur et tests en cabine"
-  //         : "Motor-fan maintenance and cabin testing",
-  //     ],
-  //     competences: [
-  //       language === "fr" ? "Travail en équipe" : "Teamwork",
-  //       language === "fr" ? "Importance de la sécurité" : "Safety importance",
-  //       language === "fr" ? "Responsabilité" : "Responsibility",
-  //       language === "fr"
-  //         ? "Introduction a la hiérarchie professionnelle"
-  //         : "Introduction to professional hierarchy",
-  //     ],
-  //   },
-  //   {
-  //     title: language === "fr" ? "Sportif sponsorisé" : "Sponsored Athlete",
-  //     company: "ABS Lyon",
-  //     period: "Sept 2017 - Oct 2022",
-  //     responsibilities: [
-  //       language === "fr"
-  //         ? "Sponsorisé par un skateshop Lyonnais"
-  //         : "Sponsored by a Lyon skateshop",
-  //       language === "fr"
-  //         ? "Skateur flowteam chez DC skateboarding, Fred Perry"
-  //         : "Flow team skater for DC skateboarding, Fred Perry",
-  //     ],
-  //     competences: [
-  //       language === "fr" ? "Discipline et Rigueur" : "Discipline and Rigor",
-  //       language === "fr"
-  //         ? "Communication, savoir se vendre"
-  //         : "Communication, self-promotion",
-  //       language === "fr"
-  //         ? "Gestion du stress et prise de risques"
-  //         : "Stress management and risk-taking",
-  //     ],
-  //   },
-  //   {
-  //     title:
-  //       language === "fr"
-  //         ? "Apprentissage autodidacte"
-  //         : "Self-taught learning",
-  //     company: "Cours en ligne",
-  //     period: language === "fr" ? "Déc 2022 - Aujourd'hui" : "Dec 2022 - Today",
-  //     responsibilities: [
-  //       language === "fr"
-  //         ? "Suivi de cours en ligne sur des plateformes telles que Udemy, Codecademy, FreeCodeCamp, YouTube."
-  //         : "Followed online courses on platforms such as Udemy, Codecademy, FreeCodeCamp, YouTube.",
-  //       language === "fr"
-  //         ? "Prise de connaissance de sites open source, comme MDN, Stack Overflow, W3Schools, GitHub."
-  //         : "Familiarized with open-source sites, such as MDN, Stack Overflow, W3Schools, GitHub.",
-  //     ],
-  //     competences: [
-  //       language === "fr"
-  //         ? "Résolution de problèmes et débogage"
-  //         : "Problem-solving and debugging",
-  //       language === "fr"
-  //         ? "Utilisation des ressources documentaires"
-  //         : "Using documentation resources",
-  //       language === "fr"
-  //         ? "Autonomie et gestion du temps"
-  //         : "Self-management and time organization",
-  //       language === "fr"
-  //         ? "Trouver des solutions et s'adapter"
-  //         : "Finding solutions and adapting",
-  //     ],
-  //   },
-  // ];
+  const experiences = [
+    {
+      title: translations.resume.experiences.exp1.title,
+      company: translations.resume.experiences.exp1.company,
+      period: translations.resume.experiences.exp1.period,
+      responsibilities: [
+        translations.resume.experiences.exp1.responsibilities[0],
+        translations.resume.experiences.exp1.responsibilities[1],
+        translations.resume.experiences.exp1.responsibilities[2],
+      ],
+      competences: [
+        translations.resume.experiences.exp1.competences[0],
+        translations.resume.experiences.exp1.competences[1],
+        translations.resume.experiences.exp1.competences[2],
+        translations.resume.experiences.exp1.competences[3],
+      ],
+    },
+    {
+      title: translations.resume.experiences.exp2.title,
+      company: translations.resume.experiences.exp2.company,
+      period: translations.resume.experiences.exp2.period,
+      responsibilities: [
+        translations.resume.experiences.exp2.responsibilities[0],
+        translations.resume.experiences.exp2.responsibilities[1],
+      ],
+      competences: [
+        translations.resume.experiences.exp2.competences[0],
+        translations.resume.experiences.exp2.competences[1],
+        translations.resume.experiences.exp2.competences[2],
+      ],
+    },
+    {
+      title: translations.resume.experiences.exp3.title,
+      company: translations.resume.experiences.exp3.company,
+      period: translations.resume.experiences.exp3.period,
+      responsibilities: [
+        translations.resume.experiences.exp3.responsibilities[0],
+        translations.resume.experiences.exp3.responsibilities[1],
+      ],
+      competences: [
+        translations.resume.experiences.exp3.competences[0],
+        translations.resume.experiences.exp3.competences[1],
+        translations.resume.experiences.exp3.competences[2],
+        translations.resume.experiences.exp3.competences[3],
+      ],
+    },
+  ];
 
   const handleCVBtn = () => {
     const link = document.createElement("a");
@@ -137,14 +89,14 @@ export default function Resume() {
           {translations.resume.skills}
         </h2>
         <div className="flex flex-wrap justify-center gap-3">
-          {/* {personalSkills.map((pSkill, index) => (
+          {personalSkills.map((pSkill, index) => (
             <span
               key={index}
               className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm"
             >
               {pSkill}
             </span>
-          ))} */}
+          ))}
         </div>
       </section>
       <section>
@@ -152,7 +104,7 @@ export default function Resume() {
           {translations.resume.xp}
         </h2>
         <div className="flex flex-wrap justify-between gap-8">
-          {/* {experiences.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <div
               key={index}
               className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-[calc(50%-1rem)]"
@@ -170,7 +122,7 @@ export default function Resume() {
               </ul>
 
               <h3 className="text-xl font-semibold pb-2 pt-2">
-                {language === "fr" ? "Compétences acquises" : "Acquired Skills"}
+                {translations.resume.acquiredSkills}
               </h3>
 
               <ul className="list-disc list-inside pl-0">
@@ -181,7 +133,7 @@ export default function Resume() {
                 ))}
               </ul>
             </div>
-          ))} */}
+          ))}
         </div>
       </section>
       <section>

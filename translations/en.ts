@@ -36,7 +36,7 @@ const en = {
     closeErrorModal: "Close",
   },
   resume: {
-    personalSkills: [
+    skillsTranslations: [
       "Communication",
       "Proactivity",
       "Patience",
@@ -54,15 +54,15 @@ const en = {
         company: "SNCF",
         period: "Sept 2014 - Aug 2017",
         responsibilities: {
-          1: "Apprenticeship training",
-          2: "Micro-mechanics and soldering on electronic boards",
-          3: "Motor-fan maintenance and cabin testing",
+          0: "Apprenticeship training",
+          1: "Micro-mechanics and soldering on electronic boards",
+          2: "Motor-fan maintenance and cabin testing",
         },
         competences: {
-          1: "Travail en équipe",
-          2: "Importance de la sécurité",
-          3: "Responsabilité",
-          4: "Introduction a la hiérarchie professionnelle",
+          0: "Travail en équipe",
+          1: "Importance de la sécurité",
+          2: "Responsabilité",
+          3: "Introduction a la hiérarchie professionnelle",
         },
       },
       exp2: {
@@ -70,13 +70,13 @@ const en = {
         company: "ABS Lyon",
         period: "Sept 2017 - Oct 2022",
         responsibilities: {
-          1: "Sponsored by a Lyon skateshop",
-          2: "Flow team skater for DC skateboarding, Fred Perry",
+          0: "Sponsored by a Lyon skateshop",
+          1: "Flow team skater for DC skateboarding, Fred Perry",
         },
         competences: {
-          1: "Discipline and Rigor",
-          2: "Communication, self-promotion",
-          3: "Stress management and risk-taking",
+          0: "Discipline and Rigor",
+          1: "Communication, self-promotion",
+          2: "Stress management and risk-taking",
         },
       },
       exp3: {
@@ -84,20 +84,21 @@ const en = {
         company: "Cours en ligne",
         period: "Dec 2022 - Today",
         responsibilities: {
-          1: "Followed online courses on platforms such as Udemy, Codecademy, FreeCodeCamp, YouTube.",
-          2: "Familiarized with open-source sites, such as MDN, Stack Overflow, W3Schools, GitHub.",
+          0: "Followed online courses on platforms such as Udemy, Codecademy, FreeCodeCamp, YouTube.",
+          1: "Familiarized with open-source sites, such as MDN, Stack Overflow, W3Schools, GitHub.",
         },
         competences: {
-          1: "Problem-solving and debugging",
-          2: "Using documentation resources",
-          3: "Self-management and time organization",
-          4: "Finding solutions and adapting",
+          0: "Problem-solving and debugging",
+          1: "Using documentation resources",
+          2: "Self-management and time organization",
+          3: "Finding solutions and adapting",
         },
       },
     },
     about: "About me",
     skills: "Skills",
     xp: "Professional Experience",
+    acquiredSkills: "Acquired Skills",
     education: {
       title: "Education",
       degres: {
