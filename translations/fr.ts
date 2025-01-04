@@ -132,7 +132,6 @@ const fr = {
     retryBtn: "Réessayer",
     homeBtn: "Retour à l'accueil",
   },
-  //NOTE Layout : NOTE
 };
 
 export default fr;
