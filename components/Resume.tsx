@@ -239,7 +239,7 @@ export default function Resume() {
             href="https://github.com/Tonysoossa"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-700 hover:bg-gray-900 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
+            className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
           >
             Github
             <FontAwesomeIcon icon={faGithub} className="ml-2 animate-shake" />
