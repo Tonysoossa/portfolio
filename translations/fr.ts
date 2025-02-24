@@ -20,9 +20,11 @@ const fr = {
       description2: "Application bancaire fictive.",
       description3:
         "Site de référencement de voitures, utilisant une API en ligne.",
+      description4: "Mini jeu contre la montre, solo et multijoueurs.",
     },
     tools: "Mes outils de travail",
     degre: "Diplôme",
+    projectLink: "Mon projet",
   },
   contact: {
     title: "Démarrons un projet ensemble, n'hésitez pas à me contacter",
@@ -101,7 +103,7 @@ const fr = {
     about: "À propos de moi",
     skills: "Compétences",
     xp: "Expérience Professionnelle",
-    acquiredSkills: 'Compétences acquises',
+    acquiredSkills: "Compétences acquises",
     education: {
       title: "Éducation",
       degres: {

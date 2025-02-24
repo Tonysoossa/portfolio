@@ -18,9 +18,11 @@ const en = {
       description1: "Apartment search site on a fictional platform.",
       description2: "Fictional banking application.",
       description3: "Car listing site using an online API.",
+      description4: "Small game against the clock, solo and multiplayers.",
     },
     tools: "My Work Tools",
     degre: "Degre",
+    projectLink: "My project",
   },
   contact: {
     title: "Let's start a project together, don't hesitate to contact me",

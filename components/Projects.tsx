@@ -51,6 +51,21 @@ export default function Projects() {
       link: "https://car-showcase-project-ivory.vercel.app/",
       github: "https://github.com/Tonysoossa/car_showcase-project",
     },
+    {
+      title: "⚠️Wordstorm⚠️  \n (Under development...)",
+      description: translations.projects.boxes.description4,
+      techno: [
+        "Next.js",
+        "Typescript",
+        "Tailwind",
+        "Aceternity UI",
+        "Others...",
+      ],
+      date: "2025",
+      image: "/project_photo/wordstorm.png",
+      link: "#",
+      github: "https://github.com/Tonysoossa/wordstorm",
+    },
   ];
 
   projects.sort((a, b) => parseInt(b.date) - parseInt(a.date));
@@ -73,8 +88,15 @@ export default function Projects() {
               height={200}
               className="w-full h-48 object-cover"
             />
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <div className="p-6 flex flex-col flex-grow text-center">
+              <h3 className="text-xl font-semibold mb-2">
+                {project.title.split("\n").map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </h3>
               <p className="text-gray-400 flex-grow">{project.description}</p>
             </div>
 
@@ -97,7 +119,7 @@ export default function Projects() {
                     href={project.link}
                     className="text-blue-400 hover:underline md:no-underline underline"
                   >
-                    {translations.projects.title}
+                    {translations.projects.projectLink}
                   </a>
                 )}
                 {project.link !== "#" && <span>|</span>}
