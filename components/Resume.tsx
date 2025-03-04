@@ -1,9 +1,5 @@
 "use client";
 import { Education } from "./resume/Education";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown, faEye } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Resume() {
@@ -70,17 +66,8 @@ export default function Resume() {
     },
   ];
 
-  const handleCVBtn = () => {
-    const link = document.createElement("a");
-    link.href = "/pdf/cv.pdf";
-    link.setAttribute("download", "CV-Servanin-Tony");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
-    <div id="resume" className="max-w-4xl mx-auto">
+    <div id="resume">
       <section className="mb-12 flex flex-col gap-4 justify-evenly">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 flex justify-center">
           {translations.resume.about}
@@ -200,50 +187,6 @@ export default function Resume() {
               {translations.resume.perso.description}
             </p>
           </div>
-        </div>
-      </section>
-      <section>
-        <h2 className="text-3xl md:text-4xl font-bold flex justify-center mt-16 mb-12 text-center">
-          {translations.resume.cv}
-        </h2>
-        <div className="flex flex-wrap gap-8 justify-center pb-10">
-          <button
-            onClick={handleCVBtn}
-            className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
-          >
-            <FontAwesomeIcon
-              icon={faFileArrowDown}
-              className="mr-2 animate-bounce"
-            />
-            {translations.resume.downloadCv}
-          </button>
-          <Link href="/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center">
-              {translations.resume.seeCv}
-              <FontAwesomeIcon icon={faEye} className="ml-2 animate-blink" />
-            </button>
-          </Link>
-          <a
-            href="https://www.linkedin.com/in/tony-servanin-90502a293/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-800 hover:bg-blue-900 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
-          >
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              className="mr-2 animate-fade-out"
-            />
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/Tonysoossa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium py-2 px-4 rounded-full transition-colors flex items-center"
-          >
-            Github
-            <FontAwesomeIcon icon={faGithub} className="ml-2 animate-shake" />
-          </a>
         </div>
       </section>
     </div>
