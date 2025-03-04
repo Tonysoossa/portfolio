@@ -94,6 +94,13 @@ const technologies: Technology[] = [
     height: 100,
     paddingTop: 18,
   },
+  {
+    name: "Figma",
+    logo: "/logos/techslider/figma.svg",
+    width: 65,
+    height: 100,
+    paddingTop: 0,
+  },
 ];
 
 const TechSlider: React.FC = () => {

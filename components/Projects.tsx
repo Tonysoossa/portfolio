@@ -19,6 +19,7 @@ const technNames = [
   { name: "HTML5" },
   { name: "CSS3" },
   { name: "Sass" },
+  { name: "Figma" },
 ];
 
 export default function Projects() {
