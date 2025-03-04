@@ -7,7 +7,7 @@ const en = {
     contact: "Contact",
   },
   home: {
-    title: "Javascript React Frontend Developer",
+    title: "React/Typescript Frontend Developer",
     introduction:
       "Originally from and residing in Lyon, France, I'm 26 years old and have been training in web development since November 2022, with the ambition of becoming a front-end developer. I recently obtained a level 5 diploma as a web integrator. Here, I present some projects I've completed as well as details about my skills and aspirations.",
     buttonLabel: "Scroll through the next section",

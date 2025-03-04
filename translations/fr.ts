@@ -8,7 +8,7 @@ const fr = {
     contact: "Contact",
   },
   home: {
-    title: "Développeur Frontend Javascript React",
+    title: "Développeur Frontend React/Typescript",
     introduction:
       "Originaire et résidant à Lyon, France, j'ai 26 ans et me forme au développement web depuis novembre 2022, avec pour ambition de devenir développeur front-end. Récemment, j'ai obtenu un diplôme de niveau 5 en tant qu'intégrateur web. Ici, je vous présente certains projets que j'ai réalisés ainsi que des détails sur mes compétences et aspirations.",
     buttonLabel: "Défiler vers la section suivante",
