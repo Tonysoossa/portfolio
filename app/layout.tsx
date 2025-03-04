@@ -39,7 +39,7 @@ export default function RootLayout({
         <head></head>
         <body className="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
           <Navbar />
-          <main className="flex-grow container mx-auto px-4 py-20">
+          <main className="flex-grow container px-4 py-20">
             {children}
           </main>
           <Footer />

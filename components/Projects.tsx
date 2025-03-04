@@ -98,7 +98,7 @@ export default function Projects() {
   projects.sort((a, b) => parseInt(b.date) - parseInt(a.date));
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 flex-col">
       <h1 className="text-4xl font-bold text-center">
         {translations.projects.title}
       </h1>
