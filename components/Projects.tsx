@@ -106,7 +106,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105  flex flex-col justify-between"
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between"
           >
             <Image
               src={project.image}
@@ -144,7 +144,7 @@ export default function Projects() {
                   <a
                     target="_blank"
                     href={project.link}
-                    className="text-blue-400 hover:underline md:no-underline underline"
+                    className="text-blue-400 hover:scale-110 md:hover:scale-105"
                   >
                     {translations.projects.projectLink}
                   </a>
@@ -153,7 +153,7 @@ export default function Projects() {
                 <a
                   target="_blank"
                   href={project.github}
-                  className="text-blue-400 hover:underline md:no-underline underline"
+                  className="text-blue-400 md:hover:scale-110 hover:scale-105"
                 >
                   Github Repo
                 </a>
