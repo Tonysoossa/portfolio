@@ -71,11 +71,11 @@ export default function Navbar() {
             Tony's Portfolio
             <FontAwesomeIcon
               icon={faGithub}
-              className="w-7 h-7 ml-2 animate-cat-move"
+              className="w-7 h-7 ml-1 animate-cat-move"
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-4 md:space-x-6">
+          <div className="hidden md:flex pr-[6rem] xl:pr-[7rem] space-x-4 md:space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.path}
@@ -118,7 +118,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800 py-2">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 -mt-4">
               {navItems.map((item) => (
                 <a
                   key={item.path}
