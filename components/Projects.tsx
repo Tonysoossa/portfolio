@@ -25,6 +25,22 @@ export default function Projects() {
   const { translations } = useLanguage();
   const projects = [
     {
+      title: "Nina Carducci",
+      description: translations.projects.boxes.description6,
+      techno: [
+        "Lighthouse",
+        "imageresizer.com",
+        "minifer.org",
+        "Schema.org",
+        "Google Rich Snippet",
+        "Opengraph",
+      ],
+      date: "2024",
+      image: "/project_photo/opti-nina.png",
+      link: "#",
+      github: "https://github.com/Tonysoossa/project_8",
+    },
+    {
       title: "Kasa",
       description: translations.projects.boxes.description1,
       techno: ["React", "SASS "],
@@ -50,6 +66,16 @@ export default function Projects() {
       image: "/project_photo/car-hub.png",
       link: "https://car-showcase-project-ivory.vercel.app/",
       github: "https://github.com/Tonysoossa/car_showcase-project",
+    },
+
+    {
+      title: "Ohmyfood",
+      description: translations.projects.boxes.description5,
+      techno: ["HTML", "SASS"],
+      date: "2024",
+      image: "/project_photo/ohmyfood.png",
+      link: "https://tonysoossa.github.io/Ohmyfood/",
+      github: "https://github.com/Tonysoossa/Ohmyfood",
     },
     {
       title: "⚠️Wordstorm⚠️  \n (Under development...)",
