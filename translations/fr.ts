@@ -21,6 +21,8 @@ const fr = {
       description3:
         "Site de référencement de voitures, utilisant une API en ligne.",
       description4: "Mini jeu contre la montre, solo et multijoueurs.",
+      description5: "Application fictive de commande de menus.",
+      description6: "Site web fictif de photographe que j'ai optimisé.",
     },
     tools: "Mes outils de travail",
     degre: "Diplôme",

@@ -19,6 +19,8 @@ const en = {
       description2: "Fictional banking application.",
       description3: "Car listing site using an online API.",
       description4: "Small game against the clock, solo and multiplayers.",
+      description5: "Fictional menu ordering application.",
+      description6: "Fictional photographer website that I optimized.",
     },
     tools: "My Work Tools",
     degre: "Degre",
