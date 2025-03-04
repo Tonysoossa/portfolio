@@ -94,21 +94,24 @@ export default function Resume() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-[calc(50%-1rem)]"
+              className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-[calc(50%-1rem)] "
             >
-              <h3 className="text-xl font-semibold">{exp.title}</h3>
+              <h3 className="text-2xl mb-2 font-semibold text-center">
+                {exp.title}
+              </h3>
               <p className="text-blue-400">{exp.company}</p>
               <p className="text-sm text-gray-400 mb-2">{exp.period}</p>
 
               <ul className="list-disc list-inside pl-0">
                 {exp.responsibilities.map((resp, idx) => (
                   <li key={idx} className="text-gray-300 flex items-start">
-                    <span className="mr-2">•</span> <span>{resp}</span>
+                    <span className="mr-2">•</span>
+                    <span>{resp}</span>
                   </li>
                 ))}
               </ul>
 
-              <h3 className="text-xl font-semibold pb-2 pt-2">
+              <h3 className="text-xl text-center font-semibold pb-4 pt-4">
                 {translations.resume.acquiredSkills}
               </h3>
 
@@ -172,18 +175,18 @@ export default function Resume() {
         </h2>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2">
-            <h3 className="text-xl font-semibold text-center text-white mb-4">
+            <h3 className="text-2xl font-semibold text-center text-white mb-4">
               {translations.resume.pro.title}
             </h3>
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-lg">
               {translations.resume.pro.description}
             </p>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2">
-            <h3 className="text-xl font-semibold text-center text-white mb-4">
+            <h3 className="text-2xl font-semibold text-center text-white mb-4">
               {translations.resume.perso.title}
             </h3>
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-lg">
               {translations.resume.perso.description}
             </p>
           </div>
