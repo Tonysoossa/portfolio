@@ -66,7 +66,7 @@ export default function Navbar() {
             href="https://github.com/Tonysoossa/portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl font-bold flex items-center"
+            className="text-xl lg:text-2xl font-bold flex items-center"
           >
             Tony's Portfolio
             <FontAwesomeIcon
@@ -90,16 +90,16 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 text-xl lg:text-2xl">
             <button
               onClick={toggleLanguage}
-              className="duration-1000 flex items-center pt-[1px]"
+              className="duration-1000 flex items-center"
             >
               <FontAwesomeIcon
                 icon={faLanguage}
-                className="w-8 h-8 mr-2 icon-flip"
+                className="lg:w-9 w-8 h-8 mr-2 icon-flip"
               />
-              <span className="hidden md:inline">
+              <span className="hidden md:inline ">
                 {translations.nav.language}
               </span>
             </button>
