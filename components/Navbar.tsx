@@ -75,7 +75,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden md:flex pr-[6rem] 2xl:pr-[7rem] space-x-4 md:space-x-6">
+          <div className="hidden lg:text-xl gap-0 lg:gap-4 text-sm md:flex pr-[6rem] 2xl:pr-[7rem] space-x-4 md:space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.path}
