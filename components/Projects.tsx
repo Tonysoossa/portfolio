@@ -131,7 +131,7 @@ export default function Projects() {
               {project.techno.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-4 pt-[1px] pb-[2px] bg-gray-700 text-gray-200 rounded-full text-sm"
+                  className="px-6 pt-[1px] pb-[2px] bg-gray-700 text-gray-200 rounded-full text-sm"
                 >
                   {tech}
                 </span>
