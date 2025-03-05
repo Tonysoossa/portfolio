@@ -90,14 +90,14 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4 text-xl lg:text-2xl">
+          <div className="flex items-center space-x-4 text-xl">
             <button
               onClick={toggleLanguage}
               className="duration-1000 flex items-center"
             >
               <FontAwesomeIcon
                 icon={faLanguage}
-                className="lg:w-9 w-8 h-8 mr-2 icon-flip"
+                className="w-7 h-8 mr-2 icon-flip pt-[0.5px]"
               />
               <span className="hidden md:inline ">
                 {translations.nav.language}
