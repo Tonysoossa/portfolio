@@ -180,7 +180,7 @@ body {
 .text-fadeInUp {
   display: inline-block;
   animation: fadeInUp 3s ease forwards;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
   opacity: 0;
 }
 
