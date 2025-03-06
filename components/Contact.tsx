@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div className="relative">
-      <h1 className="text-4xl font-bold mt-14 mb-20 flex text-center justify-center">
+      <h1 className="text-4xl md:text-5xl font-bold mt-14 mb-20 flex text-center justify-center">
         {translations.contact.title}
       </h1>
 

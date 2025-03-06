@@ -26,13 +26,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-5xl md:text-7xl text-center font-bold mb-4 text-animated text-white h-24 mt-20">
+      <h1 className="text-5xl md:text-7xl text-center font-bold text-animated text-white mt-10 md:mt-20 mb-6">
         Servanin Tony
       </h1>
-      <h2 className="text-3xl md:text-5xl text-blue-400 mb-12 sm:mb-6 text-center text-fadeInUp lg:whitespace-nowrap">
+      <h2 className="text-3xl md:text-4xl text-blue-400 mb-4 sm:mb-6 text-center text-fadeInUp lg:whitespace-nowrap">
         {translations.home.title}
       </h2>
-      <p className="text-center text-lg md:text-2xl  mb-8 text-fadeInUp text-gray-300">
+      <p className="text-center text-xl md:text-2xl mb-8 text-fadeInUp text-gray-300">
         {translations.home.introduction}
       </p>
       <section className="text-fadeInUp">
@@ -82,7 +82,7 @@ export default function Home() {
       <button
         onClick={handleScrollToProjects}
         aria-label={translations.home.buttonLabel}
-        className="flex h-14 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp"
+        className="flex h-14 w-8 bg-gray-600 text-white rounded-full hover:bg-blue-700 transition-colors text-fadeInUp mb-10"
       >
         <FontAwesomeIcon
           icon={faArrowDownLong}

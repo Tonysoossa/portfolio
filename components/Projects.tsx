@@ -99,7 +99,7 @@ export default function Projects() {
 
   return (
     <div className="space-y-16 flex-col">
-      <h1 className="text-4xl font-bold text-center">
+      <h1 className="text-4xl md:text-5xl font-bold text-center">
         {translations.projects.title}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -164,9 +164,9 @@ export default function Projects() {
         ))}
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-bold flex justify-center text-center ">
+      <h2 className="text-3xl md:text-4xl font-bold flex justify-center text-center ">
         {translations.projects.tools}
-      </h1>
+      </h2>
       <TechSlider />
       <TechList technName={technNames} />
     </div>

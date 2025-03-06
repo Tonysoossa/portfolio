@@ -72,7 +72,7 @@ export default function Resume() {
         <h1 className="text-4xl md:text-5xl font-bold mb-4 flex justify-center">
           {translations.resume.about}
         </h1>
-        <h2 className="flex justify-center text-3xl md:text-4xl font-semibold mb-6 mt-5">
+        <h2 className="flex justify-center text-2xl md:text-3xl font-semibold mb-6 mt-5">
           {translations.resume.skills}
         </h2>
         <div className="flex flex-wrap justify-center gap-3">
@@ -87,7 +87,7 @@ export default function Resume() {
         </div>
       </section>
       <section>
-        <h2 className="flex text-3xl md:text-4xl font-semibold mb-12 justify-center text-center">
+        <h2 className="flex text-2xl md:text-3xl font-semibold mb-12 justify-center text-center">
           {translations.resume.xp}
         </h2>
         <div className="flex flex-wrap justify-between gap-8">
