@@ -79,18 +79,20 @@ export default function Projects() {
       github: "https://github.com/Tonysoossa/Ohmyfood",
     },
     {
-      title: "⚠️Wordstorm⚠️  \n (Under development...)",
+      title: "Wordstorm",
       description: translations.projects.boxes.description4,
       techno: [
         "Next.js",
         "Typescript",
         "Tailwind",
         "Aceternity UI",
+        "Prisma",
+        "Clerk",
         "Others...",
       ],
       date: "2025",
       image: "/project_photo/wordstorm.png",
-      link: "#",
+      link: "https://wordstorm.vercel.app/",
       github: "https://github.com/Tonysoossa/wordstorm",
     },
   ];
