@@ -18,7 +18,7 @@ const en = {
       description1: "Apartment search site on a fictional platform.",
       description2: "Fictional banking application.",
       description3: "Car listing site using an online API.",
-      description4: "Small game against the clock, solo and multiplayers.",
+      description4: "Time-attack mini-game, type as fast as you can and beat your high score!",
       description5: "Fictional menu ordering application.",
       description6: "Fictional photographer website that I optimized.",
     },

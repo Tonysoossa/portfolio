@@ -20,7 +20,7 @@ const fr = {
       description2: "Application bancaire fictive.",
       description3:
         "Site de référencement de voitures, utilisant une API en ligne.",
-      description4: "Mini jeu contre la montre, solo et multijoueurs.",
+      description4: "Mini-jeu contre la montre, tapez au clavier le plus vite possible et battez votre record !",
       description5: "Application fictive de commande de menus.",
       description6: "Site web fictif de photographe que j'ai optimisé.",
     },
